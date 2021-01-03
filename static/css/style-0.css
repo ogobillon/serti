@@ -1,0 +1,62 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    /*gap: 6px;*/
+}
+
+.container__social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    
+    /*position:-webkit-sticky;*/
+}
+
+.container__header{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.container__informatica{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas: "title title title title"
+                         "row31 row32 row33 row34"
+                         
+                         ;
+    
+    justify-content: space-between;
+    align-content: start;                    
+    align-items:start;
+    justify-items: stretch;
+    row-gap: 1.875em;
+    column-gap: 0.625em;
+   
+}
+
+.container__audiovisual{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2,minmax(200px, auto)) auto;
+    grid-template-areas: "title title"
+                         "row1 row2";
+    
+    align-content: start;                    
+    align-items:start;
+    justify-items: stretch;
+    row-gap: 1.875em;
+    column-gap: 0.625em;
+}
+
+.container__footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    height: auto;
+    border: 1px solid rgb(110, 110, 110);
+    color: rgb(218, 218, 218);
+}

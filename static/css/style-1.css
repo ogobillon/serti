@@ -1,0 +1,372 @@
+
+body{
+    font-size: 16px;
+}
+
+.container--mod{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+header{
+width: 100%;
+}
+header label{
+    display: none;
+    color: #fff;
+    font-size: 2em;
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+
+}
+
+
+
+header label:hover{
+cursor: pointer;
+}
+.main__menu li a:hover{
+    color: rgb(150,150,150);
+    }
+
+#boton-menu{
+    display: none;
+}
+
+.main__menu ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+
+
+.main__menu li a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125em;
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: 1.5px;
+
+}
+
+/*--------------------------------- SOCIAL ---------------------------------*/
+.container__social--mod{
+    font-size: 1rem;
+    height: 112px;
+    background: #424242;
+}
+
+.container__social--mod div{
+    width: 50%;
+    height: 72px;
+
+}
+
+.container__social--mod a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 1.2em;
+    margin: 0.5em;
+}
+
+.container__social--mod div:nth-child(1){
+    padding: 20px 0 20px 3vw;
+}
+.container__social--mod div:nth-child(2){
+    text-align: right;
+    padding: 20px 20px 0 0;
+
+}
+
+.container__social--mod a:hover{
+    color: #ffffff;
+}
+/*--------------------------------- HEADER ---------------------------------*/
+.container__header--mod{
+
+    background: linear-gradient(to left, #222222, #121212);
+    border-top: 2px solid rgba(255, 0, 191,1);
+    height: 46px;
+    /*padding-left: 100px;*/
+}
+
+/*
+.container__header--mod a{
+    text-decoration: none;
+
+}  */
+
+.container__header h2{
+  /*  font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125em;
+    font-weight: 100;
+    padding: 0.875em 0.625em 0.875em 0;
+    margin-right: 0.625em;
+    color: #fff;
+    letter-spacing: 1.5px;*/
+
+}
+/*--------------------------------- INFORMATICA ---------------------------------*/
+
+.container__informatica--mod{
+    margin-top: 1em;
+    font-size: 1rem;
+}
+.container__informatica__item:nth-child(1){
+    grid-area: title;
+}
+
+.container__informatica__item:nth-child(2){
+    grid-area: row31;
+}
+
+.container__informatica__item:nth-child(3){
+    grid-area: row32;
+}
+
+.container__informatica__item:nth-child(4){
+    grid-area: row33;
+}
+
+.container__informatica__item:nth-child(5){
+    grid-area: row34;
+}
+
+.container__informatica__item__box{
+    border: 1px solid rgb(244,244,244);
+    background: rgb(244,244,244);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1em;
+}
+
+.container__informatica__item__box img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color:rgb(51,51,51);
+}
+
+
+.container__informatica__item__title{
+    text-align: center;
+    background: linear-gradient(to right, rgba(5, 22, 255,0.8), rgba(255, 0, 191,1)), url(../img/binary.png);
+    color: #fff;
+}
+
+.container__informatica__item__title h4{
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 2px;
+    padding: 0.8em;
+}
+
+
+.container__informatica__item__text{
+    background: rgb(244,244,244);
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.container__informatica__item__text h3{
+    color: rgb(5, 22, 255);
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.container__informatica__item__text p{
+    color:rgb(51,51,51);
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+/*--------------------------------- AUDIOVISUAL ---------------------------------*/
+.container__audiovisual--mod{
+   color: #fff;
+   font-size: 1rem;
+   height: auto;
+
+
+}
+
+.container__audiovisual__item--title h2{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: 2px;
+    padding: 0 0.8em;
+}
+
+.container__audiovisual__item--title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-repeat: repeat;
+    background-size:cover;
+    background: linear-gradient(to right, rgba(255, 0, 191,0), rgba(255, 0, 191,1)), url(../img/meadow.png);
+}
+
+.container__audiovisual__item:nth-child(1){
+    grid-area: title;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.container__audiovisual__item:nth-child(2){
+    grid-area: row1;
+}
+
+.container__audiovisual__item:nth-child(3){
+    grid-area: row2;
+}
+
+
+.container__audiovisual__item--mod {
+    width: 100%;
+    padding: 2em;
+    background:
+
+    linear-gradient(
+      to left,
+      rgba(0, 145, 24, 0.3),
+      #2c2c2c
+    );
+}
+
+
+.container__audiovisual__item h4{
+    font-size: 1.5em;
+    line-height: 2.25em;
+    letter-spacing: 1.2px;
+}
+
+.container__audiovisual__item p{
+    font-size: 1.3em;
+    line-height: 1.6em;
+    letter-spacing: 1.2px;
+    margin-bottom: 2em;
+}
+
+.container__audiovisual__item img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.container__audiovisual__item ul{
+    list-style-position: inside;}
+
+.container__audiovisual__item li{
+    line-height: 2em;
+    font-size: 1.3em;
+
+    letter-spacing: 1.2px;
+}
+
+/*--------------------------------- FOOTER ---------------------------------*/
+.container__footer__col:nth-child(1){
+    grid-column: 2 / 3;
+}
+.container__footer__col input[type=text], input[type=email]{
+    width: 100%;
+    border-radius: 4px;
+    margin: 10px 0;
+
+}
+.container__footer__col  textarea{
+    width: 100%;
+    border-radius: 4px;
+    resize: none;
+    margin: 10px 0;
+    height: 6em;
+
+}
+
+.container__footer__col h3{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.container__footer--mod{
+
+    background: url(../img/honeycomb-34984_1280.webp),#424242;
+    margin-top: 5px;
+    padding: 2em 1em 3em 1em;
+}
+
+.container__footer h4{
+    margin-bottom: 1.25em;
+    margin-top: 3.125em;
+}
+
+.container__footer ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1.2px;
+}
+
+/*---------------------------------SERVICIOS ---------------------------------*/
+
+.container__servicios{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__servicios__item{
+    text-align: center;
+    padding: 10px;
+}
+.container__servicios__title{
+    font-size: 2em;
+    font-weight: 700;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.container__servicios__item__titulo{
+    font-size: 2em;
+    font-weight: 700;
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+}
+.container__servicios__item__descripcion{
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(39, 30, 30);
+}
+.container__servicios__item__precio{
+    font-size: 1.5em;
+    font-weight: 700;
+    background-color: rgb(255, 255, 255);
+    color: rgb(253, 6, 6);
+}
+
