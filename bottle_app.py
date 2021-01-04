@@ -2,37 +2,21 @@ from bottle import route, run, static_file, error, template, TEMPLATES
 import db
 
 
-
-
-
-
-# mydb = mysql.connector.connect(
-#   host="ogobillon.mysql.pythonanywhere-services.com",
-#   user="ogobillon",
-#   password="m7121941",
-#   database="ogobillon$serti_db"
-# )
-#
-# mycursor = mydb.cursor()
-#
-# mycursor.execute("SELECT * FROM servicios")
-#
-# myresult = mycursor.fetchall()
-#
-# mycursor.close()
-# mydb.close()
-
 #pythonanywhere.com
-#root_ = '/home/ogobillon/mysite/'
+root_ = '/home/ogobillon/mysite/'
+consultas = db.db_get("ogobillon.mysql.pythonanywhere-services.com","ogobillon","m7121941","ogobillon$serti_db")
+
 
 #local
-root_ = ''
+#root_ = ''
+#consultas = db.db_get("localhost","root","1942","ogobillon$serti_db")
 
 root_html = root_ + 'static/html'
 root_img = root_ + 'static/img'
 root_css = root_ + 'static/css'
 root_views = root_ + 'views'
 
+datos = {'f':consultas}
 
 @route(['/', '/index.html'])
 def index():
@@ -42,10 +26,6 @@ def index():
 @route('/ventas.html')
 def ventas():
     return static_file('ventas.html', root = root_html)
-
-# @route('/servicios.html')
-# def servicios():
-#     return static_file('servicios.html', root = root_html)
 
 @route('/img/<filepath:path>')
 def imagenes(filepath):
@@ -59,13 +39,10 @@ def estilos(filepath):
 def error404(error):
     return 'Nothing here, jsorry'
 
-datos = {'f':db.db_get("localhost","root","1942","ogobillon$serti_db")}
-
-
 @route('/servicios.html')
 def hello(name='World'):
     TEMPLATES.clear()
     return template(root_views + '/servicios.html', data=datos)
 
 
-run(host='localhost', port=8080)
+#run(host='localhost', port=8080)
