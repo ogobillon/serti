@@ -371,3 +371,13 @@ cursor: pointer;
     color: rgb(253, 6, 6);
 }
 
+/*---------------------------------ENVIADO ---------------------------------*/
+
+.container__enviado{
+background-color: rgb(255, 0, 255);
+    padding:30px;
+}
+.container__enviado h1{
+background-color: rgb(255, 0, 255);
+text-align: center;
+}
