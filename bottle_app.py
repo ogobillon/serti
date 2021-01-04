@@ -1,6 +1,9 @@
-from bottle import route, run, static_file, error, template, TEMPLATES, request, post
+from bottle import route, run, static_file, error, template, TEMPLATES, request, post, debug
 import db
 import corre
+
+debug(False)
+TEMPLATES.clear()
 
 #pythonanywhere.com
 # root_ = '/home/ogobillon/mysite/'
@@ -33,7 +36,7 @@ def servicios(name='World'):
     return template(root_views + '/servicios.html', data=datos)
 
 @route('/enviado.html')
-def servicios(name='World'):
+def enviado(name='World'):
     TEMPLATES.clear()
     return template(root_views + '/enviado.html')
 
@@ -57,5 +60,6 @@ def do_login():
     mensaje = request.forms.get('user_message')
     check = corre.send_email(username, u_email, mensaje)
     return "<h1>enviado<h1>"
+
 
 run(host='localhost', port=8080)

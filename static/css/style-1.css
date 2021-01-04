@@ -367,6 +367,7 @@ cursor: pointer;
 .container__servicios__item__precio{
     font-size: 1.5em;
     font-weight: 700;
+    /*---*/
     background-color: rgb(255, 255, 255);
     color: rgb(253, 6, 6);
 }
