@@ -344,12 +344,13 @@ cursor: pointer;
 .container__servicios__item{
     text-align: center;
     padding: 10px;
+    background: linear-gradient(to left, #222222, #121212);
 }
 .container__servicios__title{
     font-size: 2em;
     font-weight: 700;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+
+    color: rgb(255, 0, 255);
 }
 
 .container__servicios__item__titulo{

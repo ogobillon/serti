@@ -2,10 +2,12 @@ from bottle import route, run, static_file, error, template
 import mysql.connector
 
 
+
+
 mydb = mysql.connector.connect(
-  host="ogobillon.mysql.pythonanywhere-services.com",
-  user="ogobillon",
-  password="m7121941",
+  host="localhost",
+  user="root",
+  password="1942",
   database="ogobillon$serti_db"
 )
 
@@ -18,14 +20,37 @@ myresult = mycursor.fetchall()
 mycursor.close()
 mydb.close()
 
-root_html = '/home/ogobillon/mysite/static/html'
-root_img = '/home/ogobillon/mysite/static/img'
-root_css = '/home/ogobillon/mysite/static/css'
+# mydb = mysql.connector.connect(
+#   host="ogobillon.mysql.pythonanywhere-services.com",
+#   user="ogobillon",
+#   password="m7121941",
+#   database="ogobillon$serti_db"
+# )
+#
+# mycursor = mydb.cursor()
+#
+# mycursor.execute("SELECT * FROM servicios")
+#
+# myresult = mycursor.fetchall()
+#
+# mycursor.close()
+# mydb.close()
+
+#pythonanywhere.com
+#root_ = '/home/ogobillon/mysite/'
+
+#local
+root_ = ''
+
+root_html = root_ + 'static/html'
+root_img = root_ + 'static/img'
+root_css = root_ + 'static/css'
+root_views = root_ + 'views'
 
 
-@route(['/','/index.html'])
+@route(['/', '/index.html'])
 def index():
-    return static_file('index.html', root = root_html )
+    return static_file('index.html', root=root_html)
 
 
 @route('/ventas.html')
@@ -50,8 +75,10 @@ def error404(error):
 
 datos = {'f':myresult}
 
+
 @route('/servicios.html')
 def hello(name='World'):
-    return template('/home/ogobillon/mysite/views/servicios.html', data=datos)
+    return template(root_views + '/servicios.html', data=datos)
 
 
+run(host='localhost', port=8080)
