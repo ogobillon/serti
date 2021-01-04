@@ -1,24 +1,10 @@
-from bottle import route, run, static_file, error, template
-import mysql.connector
+from bottle import route, run, static_file, error, template, TEMPLATES
+import db
 
 
 
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="1942",
-  database="ogobillon$serti_db"
-)
 
-mycursor = mydb.cursor()
-
-mycursor.execute("SELECT * FROM servicios")
-
-myresult = mycursor.fetchall()
-
-mycursor.close()
-mydb.close()
 
 # mydb = mysql.connector.connect(
 #   host="ogobillon.mysql.pythonanywhere-services.com",
@@ -73,11 +59,12 @@ def estilos(filepath):
 def error404(error):
     return 'Nothing here, jsorry'
 
-datos = {'f':myresult}
+datos = {'f':db.db_get("localhost","root","1942","ogobillon$serti_db")}
 
 
 @route('/servicios.html')
 def hello(name='World'):
+    TEMPLATES.clear()
     return template(root_views + '/servicios.html', data=datos)
 
 
