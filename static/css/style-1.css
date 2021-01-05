@@ -290,18 +290,35 @@ cursor: pointer;
 .container__footer__col:nth-child(1){
     grid-column: 2 / 3;
 }
-.container__footer__col input[type=text], input[type=email]{
+
+.container__footer__col{
+min-width:400px;
+}
+
+.container__footer__col input[type=text], input[type=email], input[type=submit]{
     width: 100%;
     border-radius: 4px;
     margin: 10px 0;
-
+    padding:7px;
+    border:none;
+    /*border: 2px solid #000;*/
 }
+.container__footer__col input[type=submit]{
+background: rgb(0, 184, 119);
+color:#fff;
+}
+.container__footer__col input[type=submit]:hover{
+background: rgb(0, 145, 94);
+font-weight:700;
+}
+
 .container__footer__col  textarea{
     width: 100%;
     border-radius: 4px;
     resize: none;
     margin: 10px 0;
-    height: 6em;
+    min-height: 6em;
+    padding:5px;
 
 }
 
@@ -375,10 +392,13 @@ cursor: pointer;
 /*---------------------------------ENVIADO ---------------------------------*/
 
 .container__enviado{
-background-color: rgb(255, 0, 255);
+    background-color: #5ec4c9;
     padding:30px;
+    margin-top:5px;
 }
-.container__enviado h1{
-background-color: rgb(255, 0, 255);
-text-align: center;
+.container__enviado img{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

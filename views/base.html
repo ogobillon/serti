@@ -38,39 +38,38 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="servicios.html">Servicios</a></li>
                         <li><a href="ventas.html">Ventas</a></li>
-                        <li><a href="#conta">Contacto</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
         {{!base}}
         <footer>
-        <div class="container__footer container__footer--mod">
-            <div class="container__footer__col">
-                <h3 id="conta">CONTÁCTENOS</h3>
-                <form action="/c4g" method="post"></form>
-                <ul>
-                    <li>
-                      <label for="name">Nombre</label>
-                      <input type="text" id="name" name="user_name">
-                    </li>
-                    <li>
-                      <label for="mail">Correo electrónico</label>
-                      <input type="email" id="mail" name="user_mail">
-                    </li>
-                    <li>
-                      <label for="msg">Mensaje</label>
-                      <textarea id="msg" name="user_message"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" value="Enviar">
-                    </li>
-                 </ul>
+            <div class="container__footer container__footer--mod">
+                <div class="container__footer__col">
+                    <h3 id="conta">CONTÁCTENOS</h3>
+                    <form action="/c4g" method="post">
+                        <ul>
+                            <li>
+                              <label for="name">Nombre</label>
+                              <input type="text" id="name" name="user_name">
+                            </li>
+                            <li>
+                              <label for="mail">Email</label>
+                              <input type="email" id="mail" name="user_mail">
+                            </li>
+                            <li>
+                              <label for="msg">Mensaje</label>
+                              <textarea id="msg" name="user_message"></textarea>
+                            </li>
+                            <li>
+                                <input type="submit" value="Enviar">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </div>
-
-
-        </div>
-    </footer>
+        </footer>
     </div>
 </body>
 </html>

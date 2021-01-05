@@ -1,50 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="pc, servicios, reparacion">
-    <meta name="description" content="Servicios computacionales. Desarrollo Web.">
-    <meta name="author" content="oga">
-    <meta name="robots" content="index">
-    <link rel="icon" href="img/serti-logo32x32.ico">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style-0.css">
-    <link rel="stylesheet" type="text/css" href="css/style-1.css">
-    <link rel="stylesheet" type="text/css" href="css/mediaquery.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9e165df117.js" crossorigin="anonymous"></script>
-    <title>Serti</title>
-</head>
-<body>
-    <div class="container container--mod">
-        <div class="container__social container__social--mod">
-            <div>
-                <img src="img/serti-logo-GBI-68x68.jpg" alt="serti">
-            </div>
-            <div>
-                <a href="tel:+56997952922" target="_self"><i class="fas fa-phone"></i></a>
-                <a href="#conta" ><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        <div class="container__header container__header--mod">
-            <header>
-                <input type="checkbox" id="boton-menu">
-                <label for="boton-menu"><img src="img/bars-solid68.png" alt=""></label>
-
-                <nav class="main__menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="ventas.html">Ventas</a></li>
-                        <li><a href="#conta">Contacto</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-        <div class="container__informatica container__informatica--mod">
+% rebase('base.html', title='index')
+ <div class="container__informatica container__informatica--mod">
             <div class="container__informatica__item ">
                 <div class="container__informatica__item__title">
                     <h4 id="sol-inf">SOLUCIONES INFORMÁTICAS</h4>
@@ -92,8 +47,8 @@
                 </div>
             </div>
 
-        </div>
-        <div id="sol-aud" class="container__audiovisual container__audiovisual--mod">
+ </div>
+<div id="sol-aud" class="container__audiovisual container__audiovisual--mod">
                 <div class="container__audiovisual__item container__audiovisual__item--title">
                     <h2 >SERVICIOS AUDIOVISUALES</h2>
                 </div>
@@ -118,37 +73,4 @@
                         <li>Post-Producción gráfica y sonido.</li>
                     </ul>
                 </div>
-
-
-
-        </div>
-        <footer>
-        <div class="container__footer container__footer--mod">
-            <div class="container__footer__col">
-                <h3 id="conta">CONTÁCTENOS</h3>
-                <form action="/c4g" method="post"></form>
-                <ul>
-                    <li>
-                      <label for="name">Nombre</label>
-                      <input type="text" id="name" name="user_name">
-                    </li>
-                    <li>
-                      <label for="mail">Correo electrónico</label>
-                      <input type="email" id="mail" name="user_mail">
-                    </li>
-                    <li>
-                      <label for="msg">Mensaje</label>
-                      <textarea id="msg" name="user_message"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" value="Enviar">
-                    </li>
-                 </ul>
-            </div>
-
-
-        </div>
-    </footer>
-    </div>
-</body>
-</html>
+</div>

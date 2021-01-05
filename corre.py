@@ -34,14 +34,12 @@ def send_email(nombre, correo, mensaje):
     sesion = server.login(sender_email, password)
     # Sending email from sender, to receiver with the email body
     envios = server.send_message(msg)
-    print('Email sent!')
+    # print('Email sent!')
 
-    print('Closing the server...')
+    # print('Closing the server...')
     server.quit()
 
-    print('sesiondic: ', sesion)
-    print('envios dic', envios)
+
 
     return None
 
-# send_email('juan', 'juan@perez.com', '13 mensaje de juan perez')

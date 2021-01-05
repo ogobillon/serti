@@ -2,17 +2,17 @@ from bottle import route, run, static_file, error, template, TEMPLATES, request,
 import db
 import corre
 
-debug(False)
+
 TEMPLATES.clear()
 
 #pythonanywhere.com
-# root_ = '/home/ogobillon/mysite/'
-# consultas = db.db_get("ogobillon.mysql.pythonanywhere-services.com","ogobillon","m7121941","ogobillon$serti_db")
+root_ = '/home/ogobillon/mysite/'
+consultas = db.db_get("ogobillon.mysql.pythonanywhere-services.com","ogobillon","m7121941","ogobillon$serti_db")
 
 
 #local
-root_ = ''
-consultas = db.db_get("localhost","root","1942","ogobillon$serti_db")
+# root_ = ''
+# consultas = db.db_get("localhost","root","1942","ogobillon$serti_db")
 
 root_html = root_ + 'static/html'
 root_img = root_ + 'static/img'
@@ -23,12 +23,18 @@ datos = {'f':consultas}
 
 @route(['/', '/index.html'])
 def index():
-    return static_file('index.html', root=root_html)
+    TEMPLATES.clear()
+    return template(root_views + '/index.html')
 
 @route('/ventas.html')
 def ventas(name='World'):
     TEMPLATES.clear()
     return template(root_views + '/ventas.html')
+
+@route('/contacto.html')
+def ventas(name='World'):
+    TEMPLATES.clear()
+    return template(root_views + '/contacto.html')
 
 @route('/servicios.html')
 def servicios(name='World'):
@@ -46,11 +52,11 @@ def imagenes(filepath):
 
 @route('/css/<filepath:path>')
 def estilos(filepath):
-    return static_file(filepath, root = root_css)
+    return static_file(filepath, root = root_css, mimetype='text/css')
 
 @error(404)
 def error404(error):
-    return 'Nothing here, jsorry'
+    return template(root_views + '/error404.html')
 
 
 @post('/c4g') # or @route('/login', method='POST')
@@ -58,8 +64,9 @@ def do_login():
     username = request.forms.get('user_name')
     u_email = request.forms.get('user_mail')
     mensaje = request.forms.get('user_message')
-    check = corre.send_email(username, u_email, mensaje)
-    return "<h1>enviado<h1>"
+    corre.send_email(username, u_email, mensaje)
+
+    return template(root_views + '/enviado.html')
 
 
-run(host='localhost', port=8080)
+# run(host='localhost', port=8080, reloader=True, debug=False)
