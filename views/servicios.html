@@ -1,9 +1,0 @@
-% rebase('/home/ogobillon/mysite/views/base.html', title='Servicios')
-<div class="container__servicios container__servicios--mod">
-    <div class="container__servicios__item container__servicios__title">SERVICIOS</div>
-    % for item in data['f']:
-    <div class="container__servicios__item container__servicios__item__titulo">{{item[1]}}</div>
-    <div class="container__servicios__item container__servicios__item__descripcion">{{item[2]}}</div>
-    <div class="container__servicios__item container__servicios__item__precio">{{item[3]}}</div>
-    % end
-</div>
