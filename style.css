@@ -1,35 +1,91 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 :root{
     font-size: 16px;
     overflow-x: hidden;
+    font-family: sans-serif;
+    
 }
+header {
+    background-color: #4484ce;
+    color:whitesmoke;
+    padding: 1em 0;
+}
+header li {
+    display:inline;
+}
+header nav{
+    text-align:center;
+}
+
 #main-box{
     width: 100vw;
 }
 #secc-00{
     display:grid;
+    
 
-    grid-template-areas: "imagen rese"
-                        "imagen perso";
+    grid-template-areas:"titulo" 
+                        "rese"
+                        "imagen"
+                        "perso";
 }
+#secc-00 > h1{
+    grid-area: titulo;
+    font-size:3rem;
+    font-weight: 100;
+    color:#383838;
+    justify-self: center;
+    align-self: flex-start;
+    margin-top:0.4em;
+    text-transform: uppercase;
+}
+
 #secc-00 > img{
     grid-area: imagen;
     justify-self: center;
     align-self: center;
-    width: 90%;
+    width: 100%;
     height:auto;
 }
-#secc-00 > p{
-     padding: 1em 1em;
-     
-}
-#secc-00:nth-child(2) {
-    grid-area: rese;
-}
-#secc-00:nth-child(3){
-    grid-area: perso;
+
+#rese-box {
+    width:90%;
+    justify-self: center;
     
+    border-radius: 20px;
+    line-height: 1.9em;
+    grid-area: rese;
+    /*background-image: linear-gradient(90deg,#383838,#6d6d6d);*/
+    color:#383838;
+}
+#rese-box > p::first-letter{
+    font-size: 3rem;
+    
+}
+#rese-box > p{
+    font-size: 1.3rem;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+#perso-box{
+    grid-area: perso;
+    width:90%;
+    justify-self: center;
+    margin: 2em 0;
+    border-radius: 20px;
+    line-height: 1.9em;
+
+    background-image: linear-gradient(90deg,#965151,#993636);
+    color:rgb(255, 255, 255);
+    
+}
+#perso-box > p{
+    font-size: 1.5rem;
+    padding: 1em;
+    text-align: center;
 }
