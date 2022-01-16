@@ -8,28 +8,57 @@
     font-size: 16px;
     overflow-x: hidden;
     font-family: 'Times New Roman', Times, serif;
+    
 }
 
 header {
+    position: relative;
     background-color: #4484ce;
     color: rgb(255, 255, 255);
-    padding: 1em 0;
-    border-bottom: solid 2px #2f79ce;
+    background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");    border-bottom: solid 2px #2f79ce;
+    height: 4rem;
+}
+header > img{
+    position:absolute;
+    display:block;
+    width: 68px;
+    height: auto;
+    top:30%;
+    left:calc(50% - 32px);
+    border-radius: 40%;
+    animation: logo-move 4s ease;
+    animation-fill-mode: forwards;
+    
+
+    
 }
 
-header li {
-    display: inline;
-    text-transform: uppercase;
-    font-size: 0.8rem;
+header >nav {
+   position: absolute;
+   top:-50px;
+   left:1%;
+   font-size: 0.8rem;
+   padding: 1em 0.5em 0.5em 0.5em;
+   display:inline;
+   background-color: rgba(68,132,206,0.6);
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+   box-shadow: 2px 2px 10px black;
+   animation: mymove 0.5s ease;
+   animation-fill-mode: forwards;
+
+}
+header > nav > a{
+    color:white;
+    text-decoration: none;
     font-weight: bold;
-}
-
-header nav {
-    text-align: center;
+    
 }
 
 #main-box {
-    width: 100vw;
+    max-width: 1000px;
+    margin:0 auto;
+    background-color: rgb(247, 247, 247);
 }
 
 
@@ -49,7 +78,7 @@ header nav {
     color: #383838;
     justify-self: center;
     align-self: flex-start;
-    margin-top: 0.4em;
+    margin-top: 0.6em;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -63,7 +92,7 @@ header nav {
 }
 
 .p-box {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.5em;
     letter-spacing: 0.5px;
     text-align: center;
@@ -94,6 +123,11 @@ header nav {
     color: rgb(255, 255, 255);
     padding: 1rem;
 }
+#perso-box > p{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-stretch: ultra-expanded;
+}
 
 
 /* secc-0 */
@@ -111,9 +145,9 @@ header nav {
 }
 
 #secc-0>h2 {
-    font-size: 0.9em;
+    font-size: 1.1em;
     text-transform: uppercase;
-    background-image: linear-gradient(90deg, #2f79ce, #ffffff);
+    background-image: linear-gradient(90deg, #2f79ce, rgb(247, 247, 247));
     color: white;
     padding: 0.2em;
     border-radius: 1px;
@@ -128,18 +162,18 @@ header nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
 }
 
 .armado-ele-box h3 {
-    font-size: 0.5em;
+    font-size: 0.7rem;
     text-align: center;
     padding: 0.6em;
     text-transform: uppercase;
 }
 
 .armado-ele-box img {
-    width: 32px;
+    width: 64px;
     height: auto;
 }
 
@@ -221,15 +255,29 @@ header nav {
 footer {
     background-color: #383838;
     font-size: 1rem;
-    padding: 1em 0;
+    padding: 2em 0;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 2px black;
+        background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");    border-bottom: solid 2px #2f79ce;
+
 }
 
 footer>a {
-    color: black;
+    color: rgb(255, 255, 255);
+    padding-bottom:1em;
 }
 
 footer a:last-child {
     display: none;
 }
+@keyframes mymove {
+    from {top: -50px;}
+    to {top: 0px;}
+  }
+  @keyframes logo-move {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
