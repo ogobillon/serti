@@ -8,7 +8,7 @@
     font-size: 16px;
     overflow-x: hidden;
     font-family: 'Times New Roman', Times, serif;
-    
+
 }
 
 header {
@@ -58,7 +58,7 @@ header > nav > a{
 #main-box {
     max-width: 1000px;
     margin:0 auto;
-    background-color: rgb(247, 247, 247);
+
 }
 
 
@@ -147,7 +147,7 @@ header > nav > a{
 #secc-0>h2 {
     font-size: 1.1em;
     text-transform: uppercase;
-    background-image: linear-gradient(90deg, #2f79ce, rgb(247, 247, 247));
+    background-image: linear-gradient(90deg, #2f79ce, rgb(255, 255, 255));
     color: white;
     padding: 0.2em;
     border-radius: 1px;
@@ -276,8 +276,23 @@ footer a:last-child {
 @keyframes mymove {
     from {top: -50px;}
     to {top: 0px;}
-  }
-  @keyframes logo-move {
+}
+@keyframes logo-move {
     from {opacity: 0;}
     to {opacity: 1;}
-  }
+}
+
+@media (min-width: 1000px){
+   #secc-00{
+    grid-template-areas: "titulo titulo" "rese rese" "imagen perso";
+    padding: 2rem;
+   } 
+   #secc-00>img{
+      
+   }
+    #perso-box{
+    /*width: 50%;*/
+}
+
+}
+
