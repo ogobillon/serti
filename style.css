@@ -53,6 +53,7 @@ header > nav > a{
 }
 
 #main-box {
+    width:100vw;
     max-width: 1000px;
     margin:0 auto;
 
@@ -307,7 +308,7 @@ footer a:last-child {
     to {opacity: 1;}
 }
 
-@media (min-width: 600px){
+@media screen and (min-width: 650px){
     :root{
         font-size: 24px;
     }
@@ -324,4 +325,5 @@ footer a:last-child {
 }
 
 }
+
 
