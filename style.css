@@ -6,17 +6,18 @@
 
 :root {
     font-size: 16px;
-    
+    overflow-x: hidden;
     font-family: 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
    
 
 }
 body > div {
+    /*
     position:relative;
    overflow-x: hidden;
     width: 100vw;
-
+*/
 }
 
 header {
