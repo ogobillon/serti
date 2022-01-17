@@ -6,16 +6,22 @@
 
 :root {
     font-size: 16px;
-    overflow-x: hidden;
+    
     font-family: 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
+   
+
+}
+body > div {
+    position:relative;
+    overflow-x: hidden;
     width: 100vw;
 
 }
 
 header {
     position: relative;
-    width: 100%;
+
     background-color: #4484ce;
     color: rgb(255, 255, 255);
     background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");    border-bottom: solid 2px #2f79ce;
