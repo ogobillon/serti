@@ -21,16 +21,13 @@ header {
 header > img{
     position:absolute;
     display:block;
-    width: 68px;
+    width: 4.25rem;
     height: auto;
     top:30%;
-    left:calc(50% - 32px);
+    left:calc(50% - 2rem);
     border-radius: 40%;
-    animation: logo-move 4s ease;
+    animation: logo-move 2s ease;
     animation-fill-mode: forwards;
-    
-
-    
 }
 
 header >nav {
@@ -61,13 +58,12 @@ header > nav > a{
 
 }
 
-
 /* secc-00 -----------------------------------
 ------------------------------------------------------*/
 
 #secc-00 {
     display: grid;
-    grid-template-areas: "titulo" "rese" "imagen" "perso";
+    grid-template-areas: "titulo" "rese" "perso";
 }
 
 #secc-00>h1 {
@@ -82,14 +78,14 @@ header > nav > a{
     margin-bottom: 20px;
     text-transform: uppercase;
 }
-
+/*
 #secc-00>img {
     grid-area: imagen;
     justify-self: center;
     align-self: center;
     width: 100%;
     height: auto;
-}
+}*/
 
 .p-box {
     font-size: 1.3rem;
@@ -114,19 +110,32 @@ header > nav > a{
 }
 
 #perso-box {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+
     grid-area: perso;
-    width: 90%;
+    width: 100%;
     justify-self: center;
     margin: 2em 0;
     border-radius: 5px;
-    background-image: linear-gradient(90deg, #965151, #993636);
+    background-color:rgb(148, 17, 17);
+    background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+    /*background-image: linear-gradient(90deg, #965151, #993636);*/
+  
     color: rgb(255, 255, 255);
     padding: 1rem;
+}
+#perso-box>img{
+    width: 100%;
+    border-radius:10px;
+    object-fit: cover;
 }
 #perso-box > p{
     font-size: 2rem;
     font-weight: bolder;
-    font-stretch: ultra-expanded;
+    padding: 0.5em 0.5em;
+   
 }
 
 
@@ -145,9 +154,11 @@ header > nav > a{
 }
 
 #secc-0>h2 {
-    font-size: 1.1em;
+    font-size: 1.3rem;
+    text-align: center;
     text-transform: uppercase;
-    background-image: linear-gradient(90deg, #2f79ce, rgb(255, 255, 255));
+    background-color:#2f79ce;
+   /* background-image: linear-gradient(90deg, #2f79ce, rgb(255, 255, 255));*/
     color: white;
     padding: 0.2em;
     border-radius: 1px;
@@ -161,12 +172,19 @@ header > nav > a{
 .armado-ele-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin-bottom: 0rem;
+    /*grid-template-rows: repeat(2, 1fr);*/
+    margin-bottom: 2rem;
+    background-color:rgba(47, 121, 206,0.1);
+    border-bottom-left-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
+}
+.armado-ele-box-2{
+    background-color:rgba(47, 206, 108, 0.1);
+
 }
 
 .armado-ele-box h3 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-align: center;
     padding: 0.6em;
     text-transform: uppercase;
@@ -183,6 +201,12 @@ header > nav > a{
     align-items: center;
     flex-direction: column;
     padding: 1rem 0;
+}
+.icon-wraper{
+    border:solid 2px #2f79ce;
+    padding:0.5rem;
+    border-radius:0.5rem;
+
 }
 
 .backup-net-box {
@@ -268,6 +292,7 @@ footer {
 footer>a {
     color: rgb(255, 255, 255);
     padding-bottom:1em;
+    font-size: 1.5rem;
 }
 
 footer a:last-child {
@@ -282,16 +307,20 @@ footer a:last-child {
     to {opacity: 1;}
 }
 
-@media (min-width: 1000px){
+@media (min-width: 600px){
+    :root{
+        font-size: 24px;
+    }
    #secc-00{
-    grid-template-areas: "titulo titulo" "rese rese" "imagen perso";
     padding: 2rem;
    } 
-   #secc-00>img{
-      
+   #perso-box {
+
+    flex-direction: row;
    }
-    #perso-box{
-    /*width: 50%;*/
+   .armado-ele-box img {
+    width: 128px;
+    height: auto;
 }
 
 }
