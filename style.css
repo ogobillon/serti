@@ -309,8 +309,9 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-top: solid 2px black;
-        background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");    border-bottom: solid 2px #2f79ce;
+    border-top: solid 2px rgb(0,100,252);
+    background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+
 
 }
 
