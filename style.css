@@ -9,23 +9,21 @@
     overflow-x: hidden;
     font-family: 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
-   
-
+    --principal:#d7eaf3;
+    --secundario: #77b5d9;
+    --tercero:#14397d;
+    --accent:#000;
 }
 body > div {
-    /*
-    position:relative;
-   overflow-x: hidden;
-    width: 100vw;
-*/
+background-color: #fff;
 }
 
 header {
     position: relative;
-
-    background-color: #4484ce;
-    color: rgb(255, 255, 255);
-    background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");    border-bottom: solid 2px #2f79ce;
+    background-color: var(--tercero);
+    color: var(--tercero);
+    background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+    border-bottom: solid 4px rgb(0,100,252);
     height: 4rem;
 }
 header > img{
@@ -47,7 +45,7 @@ header >nav {
    font-size: 0.8rem;
    padding: 1em 0.5em 0.5em 0.5em;
    display:inline;
-   background-color: rgba(68,132,206,0.6);
+   background-color: var(--tercero);
    border-bottom-left-radius: 3px;
    border-bottom-right-radius: 3px;
    box-shadow: 2px 2px 10px black;
@@ -83,7 +81,7 @@ header > nav > a{
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: 10px;
-    color: #383838;
+    color:var(--tercero);
     justify-self: center;
     align-self: flex-start;
     margin-top: 0.6em;
@@ -112,8 +110,10 @@ header > nav > a{
     border-radius: 20px;
     grid-area: rese;
     /*background-image: linear-gradient(90deg,#383838,#6d6d6d);*/
-    color: #383838;
+    background-color:rgba(119, 181, 217,0.1);
+    color:var(--tercero);
     margin-bottom: 1rem;
+    padding:1em;
 }
 
 #rese-box>p::first-letter {
@@ -122,30 +122,40 @@ header > nav > a{
 }
 
 #perso-box {
+    /*
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
-
+*/
     grid-area: perso;
     width: 100%;
     
     margin: 2em 0;
     border-radius: 5px;
-    background-color:rgb(148, 17, 17);
-    background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+    background-color:var(--secundario);
+    /*background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");*/
     /*background-image: linear-gradient(90deg, #965151, #993636);*/
   
     color: rgb(255, 255, 255);
-    padding: 1rem;
+    padding: 0.5rem;
 }
-#perso-box>img{
+#perso-box > div{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    border:dashed  2px rgba(255, 255, 255, 0.5);
+    padding: 0.5rem;
+}
+
+#perso-box img{
     width: 100%;
     max-width: 360px;
     border-radius:10px;
    /* object-fit: cover;*/
 }
-#perso-box > p{
+#perso-box   p{
     font-size: 2rem;
     font-weight: bolder;
     padding: 0.5em 0.5em;
@@ -173,11 +183,13 @@ header > nav > a{
     font-size: 1.3rem;
     text-align: center;
     text-transform: uppercase;
-    background-color:#2f79ce;
+    background-color:var(--tercero);
    /* background-image: linear-gradient(90deg, #2f79ce, rgb(255, 255, 255));*/
     color: white;
     padding: 0.2em;
     border-radius: 1px;
+    border-top-left-radius:0.5rem;
+    border-top-right-radius:0.5rem;
 }
 
 #secc-0>p {
@@ -190,14 +202,11 @@ header > nav > a{
     grid-template-columns: repeat(2, 1fr);
     /*grid-template-rows: repeat(2, 1fr);*/
     margin-bottom: 2rem;
-    background-color:rgba(47, 121, 206,0.1);
+    background-color:rgba(119, 181, 217,0.1);
     border-bottom-left-radius:0.5rem;
     border-bottom-right-radius:0.5rem;
 }
-.armado-ele-box-2{
-    background-color:rgba(47, 206, 108, 0.1);
 
-}
 
 .armado-ele-box h3 {
     font-size: 0.8rem;
@@ -230,7 +239,7 @@ header > nav > a{
     flex-direction: column;
     align-items: stretch;
     border: solid 3px black;
-    border-radius: 2px;
+    border-radius: 10px;
     margin-bottom: 3rem;
 }
 
@@ -293,7 +302,7 @@ header > nav > a{
 }
 
 footer {
-    background-color: #383838;
+    background-color: var(--tercero);
     font-size: 1rem;
     padding: 2em 0;
     display: flex;
@@ -330,7 +339,7 @@ footer a:last-child {
    #secc-00{
     padding: 2rem;
    } 
-   #perso-box {
+   #perso-box >div{
 
     flex-direction: row;
    }
